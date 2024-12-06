@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金句生成图片 - 将文字转化为精美图片</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 左侧编辑区 -->
+        <div class="edit-panel">
+            <h1>金句生成图片</h1>
+            
+            <!-- 文本输入区 -->
+            <div class="input-group">
+                <label for="text-input">输入文字</label>
+                <textarea id="text-input" placeholder="在这里输入您想要转换的文字..."></textarea>
+            </div>
+
+            <!-- 样式选择区 -->
+            <div class="style-group">
+                <!-- 背景色选择 -->
+                <div class="color-picker">
+                    <label>背景颜色</label>
+                    <div class="color-options">
+                        <button class="color-btn" style="background-color: #FFB5B5"></button>
+                        <button class="color-btn" style="background-color: #FFD9B5"></button>
+                        <button class="color-btn" style="background-color: #FFFFB5"></button>
+                        <button class="color-btn" style="background-color: #B5FFB5"></button>
+                        <button class="color-btn" style="background-color: #B5FFFF"></button>
+                        <button class="color-btn" style="background-color: #B5B5FF"></button>
+                        <button class="color-btn" style="background-color: #FFB5FF"></button>
+                    </div>
+                </div>
+
+                <!-- 字体选择 -->
+                <div class="font-picker">
+                    <label for="font-select">字体选择</label>
+                    <select id="font-select">
+                        <option value="PingFang SC">苹方</option>
+                        <option value="Microsoft YaHei">微软雅黑</option>
+                        <option value="SimSun">宋体</option>
+                        <option value="KaiTi">楷体</option>
+                    </select>
+                </div>
+
+                <!-- 文字颜色选择 -->
+                <div class="text-color-picker">
+                    <label for="text-color">文字颜色</label>
+                    <input type="color" id="text-color" value="#000000">
+                </div>
+
+                <!-- 字体大小选择 -->
+                <div class="font-size-picker">
+                    <label for="font-size">字体大小</label>
+                    <div class="size-control">
+                        <input type="range" id="font-size" min="20" max="100" value="40">
+                        <span id="font-size-value">40px</span>
+                    </div>
+                </div>
+
+                <!-- 背景图片上传 -->
+                <div class="bg-image-picker">
+                    <label for="bg-image">背景图片</label>
+                    <input type="file" id="bg-image" accept="image/*">
+                    <button id="remove-bg-image" class="remove-button">移除背景图片</button>
+                </div>
+            </div>
+
+            <!-- 下载按钮 -->
+            <button id="download-btn" class="download-button">下载图片</button>
+        </div>
+
+        <!-- 右侧预览区 -->
+        <div class="preview-panel">
+            <h2>预览效果</h2>
+            <canvas id="preview-canvas"></canvas>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
